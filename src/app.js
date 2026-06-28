@@ -1,5 +1,7 @@
 import express from "express";
 import cors from "cors";
+import healthCheckRouter from "./routes/healthcheck.routes.js";
+
 const app = express();
 
 // Basic configuration
@@ -21,5 +23,6 @@ app.get("/", (req, res) => {
 app.get("/instagram", (req, res) => {
   res.send("instagram page");
 });
+app.use("/api/v1", healthCheckRouter);
 
 export default app;
