@@ -1,7 +1,5 @@
 import mailgen from "mailgen";
 
-
-
 const emailVerificationMailgenContent = (username, verificationUrl) => {
     return {
         body: {
