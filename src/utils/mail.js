@@ -41,7 +41,7 @@ const forgotPasswordMailgenContent = (username, passwordResetUrl) => {
 };
 
 const sendEmail = async (options) => {
-  const mailGenerator = new Mailgen({
+  const mailGenerator = new mailgen({
     theme: "default",
     product: {
       name: "Task Manager",

@@ -1,11 +1,12 @@
 import { User } from "../models/user.models.js";
 import { ApiResponse } from "../utils/api-response.js";
 import { ApiError } from "../utils/api-error.js";
+import { emailVerificationMailgenContent } from "../utils/mail.js";
 import { asyncHandler } from "../utils/async-handler.js";
 import { sendEmail } from "../utils/mail.js";
 const generateAccessAndRefreshToken = async (userId) => {
   try {
-    const user = await User.findById();
+    const user = await User.findById(userId);
     const accessToken = user.generateAccessToken();
     const refreshToken = user.generateRefreshToken();
 
