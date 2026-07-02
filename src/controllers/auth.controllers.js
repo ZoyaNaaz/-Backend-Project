@@ -332,4 +332,6 @@ export {
   verifyEmail,
   resendEmailVerification,
   forgotPasswordRequest,
+  changeCurrentPassword,
+  resetForgotPassword,
 };
